@@ -2,7 +2,7 @@ package com.example.thi_m3.model;
 
 import java.time.LocalDate;
 
-public class student {
+public class Student {
 private String name;
 private LocalDate dateOfBirth;
 private String address;
@@ -10,10 +10,10 @@ private String phoneNumber;
 private String email;
 private String classroom;
 
-    public student() {
+    public Student() {
     }
 
-    public student(String name, LocalDate dateOfBirth, String address, String phoneNumber, String email, String classroom) {
+    public Student(String name, LocalDate dateOfBirth, String address, String phoneNumber, String email, String classroom) {
         this.name = name;
         this.dateOfBirth = dateOfBirth;
         this.address = address;
