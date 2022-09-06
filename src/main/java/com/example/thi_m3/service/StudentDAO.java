@@ -1,6 +1,7 @@
 package com.example.thi_m3.service;
 
 import com.example.thi_m3.connection.ConnectionJDBC;
+import com.example.thi_m3.model.Student;
 
 import java.sql.Connection;
 
