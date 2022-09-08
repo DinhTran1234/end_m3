@@ -12,4 +12,8 @@ public interface IStudentDAO {
     public void edit (int id, Student student);
 
     public void delete (Student student);
+
+    void delete(int id);
+
+    Student findByID(int id);
 }

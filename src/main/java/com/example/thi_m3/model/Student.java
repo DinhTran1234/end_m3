@@ -1,25 +1,45 @@
 package com.example.thi_m3.model;
 
+import java.sql.Date;
 import java.time.LocalDate;
 
 public class Student {
-private String name;
-private LocalDate dateOfBirth;
-private String address;
-private String phoneNumber;
-private String email;
-private String classroom;
+    private int id;
+    private String name;
+    private Date birth;
+    private String address;
+    private String phone;
+    private String email;
+    private int class_id;
 
     public Student() {
     }
 
-    public Student(String name, LocalDate dateOfBirth, String address, String phoneNumber, String email, String classroom) {
+    public Student(int id, String name, Date birth, String address, String phone, String email) {
+        this.id = id;
         this.name = name;
-        this.dateOfBirth = dateOfBirth;
+        this.birth = birth;
         this.address = address;
-        this.phoneNumber = phoneNumber;
+        this.phone = phone;
         this.email = email;
-        this.classroom = classroom;
+    }
+
+    public Student(int id, String name, Date birth, String address, String phone, String email, int class_id) {
+        this.id = id;
+        this.name = name;
+        this.birth = birth;
+        this.address = address;
+        this.phone = phone;
+        this.email = email;
+        this.class_id = class_id;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -30,12 +50,12 @@ private String classroom;
         this.name = name;
     }
 
-    public LocalDate getDateOfBirth() {
-        return dateOfBirth;
+    public Date getBirth() {
+        return birth;
     }
 
-    public void setDateOfBirth(LocalDate dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
+    public void setBirth(Date birth) {
+        this.birth = birth;
     }
 
     public String getAddress() {
@@ -46,12 +66,12 @@ private String classroom;
         this.address = address;
     }
 
-    public String getPhoneNumber() {
-        return phoneNumber;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
     public String getEmail() {
@@ -62,44 +82,34 @@ private String classroom;
         this.email = email;
     }
 
-    public String getClassroom() {
-        return classroom;
+    public int getClass_id() {
+        return class_id;
     }
 
-    public void setClassroom(String classroom) {
-        this.classroom = classroom;
+    public void setClass_id(int class_id) {
+        this.class_id = class_id;
+    }
+
+    public Student(String name, Date birth, String address, String phone, String email, int class_id) {
+        this.name = name;
+        this.birth = birth;
+        this.address = address;
+        this.phone = phone;
+        this.email = email;
+        this.class_id = class_id;
     }
 
     @Override
     public String toString() {
-        return "student{" +
-                "name='" + name + '\'' +
-                ", dateOfBirth=" + dateOfBirth +
+        return "Student{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", birth=" + birth +
                 ", address='" + address + '\'' +
-                ", phoneNumber='" + phoneNumber + '\'' +
+                ", phone='" + phone + '\'' +
                 ", email='" + email + '\'' +
-                ", classroom='" + classroom + '\'' +
+                ", class_id=" + class_id +
                 '}';
-    }
-
-    @Override
-    public int hashCode() {
-        return super.hashCode();
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        return super.equals(obj);
-    }
-
-    @Override
-    protected Object clone() throws CloneNotSupportedException {
-        return super.clone();
-    }
-
-    @Override
-    protected void finalize() throws Throwable {
-        super.finalize();
     }
 }
 
